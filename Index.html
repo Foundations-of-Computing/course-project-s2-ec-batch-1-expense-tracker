@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> <!--Machine readable data that helps search engines to know more about a page and browsers to render it properly.-->
+    <meta charset="UTF-8"> <!--Unicode 8-bit encoding is being used to represent letter.-->
+    <title>Cash Flow.</title> <!--Tab title.-->
+    <link rel="icon" href="Wallet(Colour).png" type="image/x-icon"> <!--Used to link the document to external resources. Used here to link to the favicon the site uses. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- 'preconnect' premptively establishes a connection to an external origin that the site might need resources from. -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet"> <!--Fetches a particular font from Google Fonts.-->
+   <link href="Style.css" rel="stylesheet">
+   <script src="Script.js" defer></script>
+</head>
+<body> <!--Contains the user readable content of a website.-->
+    <h1><img src="Wallet(Colour).png" alt="Cash Flow." title="Money Doesn't Grow On Trees." width="50">&nbsp;Cash Flow.</h1> <!--Properties of the image embedded in the header.-->
+    <hr>
+    <p><strong>Keep Your Expenditure In Check.</strong></p>
+    <form id="cashFlowForm"> <!--Used to accept information from the user for processing.-->
+        <section class="form-row">
+            <label for="DateOfExpense">Date :</label>
+            <input id="DateOfExpense" type="date" name="DateOfExpense" required/>
+        </section>
+        <section class="form-row">
+            <label for="TimeOfExpense">Time :</label>
+            <input id="TimeOfExpense" type="time" name="TimeOfExpense" required/>
+        </section>
+        <section class="form-row">
+            <label for="Category">Category :</label>
+            <select id="Category" name="Category"> <!--A drop down menu of options.-->
+                <option value="Food">Food</option>
+                <option value="Transportation">Transportation</option>
+                <option value="Salary">Salary</option>
+                <option value="Utilities">Utilities</option>
+                <option value="Other">Other</option>
+            </select>
+        </section>
+        <section class="form-row">
+            <label>Type:</label>
+            <section>
+                <input type="radio" id="expense" name="type" value="expense" checked>
+                <label for="expense">Expense</label>
+                <input type="radio" id="income" name="type" value="income">
+                <label for="income">Income</label>
+            </section>
+        </section>
+        <section class="form-row">
+            <label for="Expense_Income">Amount : ₹</label>
+            <input id="Expense_Income" type="number" name="Expense_Income" required min="0"/>
+        </section>
+        <p>
+            <button type="button" onclick="addEntry()">Add Entry</button>
+            <button type="reset">Clear</button>
+        </p>
+    </form>
+    <table id="cashFlowTable"> 
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Category</th>
+                <th>Expense/Income</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+  </body>
+</html>
